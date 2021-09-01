@@ -1,0 +1,43 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <OutputType>WinExe</OutputType>
+        <TargetFramework>net5.0</TargetFramework>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <Compile Include="Game1.fs" />
+        <Compile Include="Program.fs" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <None Include="Content\Content.mgcb" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <MonoGameContentReference Include="Content\Content.mgcb" Visible="false" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <TrimmerRootAssembly Include="MonoGame.Framework" Visible="false" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <PackageReference Include="MonoGame.Content.Builder.Task" Version="3.8.*" />
+        <PackageReference Include="MonoGame.Framework.DesktopGL.Core" Version="3.8.*" />
+        <PackageReference Include="NSubsys" Version="0.7.0-build20180604-0047">
+            <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
+            <PrivateAssets>all</PrivateAssets>
+        </PackageReference>
+    </ItemGroup>
+
+    <ItemGroup>
+      <Reference Include="MonoLink, Version=1.0.0.1, Culture=neutral, PublicKeyToken=null">
+        <HintPath>..\MonoLink.dll</HintPath>
+      </Reference>
+      <Reference Include="MonoLink.Library, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+        <HintPath>..\MonoLink.Library.dll</HintPath>
+      </Reference>
+    </ItemGroup>
+
+</Project>
